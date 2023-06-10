@@ -1,9 +1,9 @@
 import { ToastPosition, TypeOptions } from "react-toastify";
 
-type TOptions = Exclude<TypeOptions, 'default'>;
+type TType = Exclude<TypeOptions, 'default'>;
 
 export interface IToast {
-    type: TOptions;
+    type: TType;
     message: string;
     duration?: number;
     position?: ToastPosition;

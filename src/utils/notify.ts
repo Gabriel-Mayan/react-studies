@@ -1,6 +1,7 @@
-import { toast, ToastOptions, ToastPosition, TypeOptions } from "react-toastify";
+import { IToast } from "../@types/notify";
+import { toast, ToastOptions } from "react-toastify";
 
-export const showToast = (type: TypeOptions, message: string, duration = 2000, position: ToastPosition = toast.POSITION.TOP_RIGHT) => {
+export const showToast = ({ type, message, duration = 2000, position = toast.POSITION.TOP_RIGHT }: IToast) => {
     toast[type](message, {
         position,
         autoClose: duration,
